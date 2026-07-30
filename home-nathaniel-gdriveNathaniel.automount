@@ -1,0 +1,11 @@
+# /etc/systemd/system/home-nathaniel-gdriveNathaniel.automount
+[Unit]
+Description=Automount gdriveNathaniel
+After=network-online.target
+Wants=network-online.target
+
+[Automount]
+Where=/home/nathaniel/gdriveNathaniel
+
+[Install]
+WantedBy=multi-user.target

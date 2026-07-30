@@ -1,0 +1,14 @@
+# /etc/systemd/system/home-nathaniel-gdriveNathaniel.mount
+[Unit]
+Description=RClone mount gdriveNathaniel
+After=network-online.target
+Wants=network-online.target
+
+[Mount]
+What=gdriveNathaniel:
+Where=/home/nathaniel/gdriveNathaniel
+Type=rclone
+Options=rw,args2env,vfs_cache_mode=writes,config=/home/nathaniel/.config/rclone/rclone.conf,uid=1004,gid=1004,allow_other
+
+[Install]
+WantedBy=multi-user.target
