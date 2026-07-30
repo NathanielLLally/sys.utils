@@ -1,0 +1,15 @@
+# /etc/systemd/system/mnt-l0pht.mount
+[Unit]
+Description=Mount l0pht NTFS drive
+After=multi-user.target dev-disk-by\x2duuid-8C4257104256FE80.device
+BindsTo=dev-disk-by\x2duuid-8C4257104256FE80.device
+
+[Mount]
+What=/dev/disk/by-uuid/8C4257104256FE80
+Where=/mnt/l0pht
+Type=ntfs
+#nathaniel:audio
+#hawkeye
+Options=uid=1000,gid=63,umask=002,nofail
+#starbumblebee2
+#Options=uid=1004,gid=29,umask=002,nofail
